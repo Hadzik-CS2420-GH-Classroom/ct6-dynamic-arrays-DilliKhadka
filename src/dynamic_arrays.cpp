@@ -165,11 +165,12 @@ void dynamicArrays() {
 	printArray(arr, count, capacity);
     // --- 4. Adding more elements after resize ---
     std::cout << "\n--- 4. Adding After Resize ---" << '\n';
+    arr[count] = 40; count++;
 	arr[count] = 50; count++;
 	arr[count] = 60; count++;   
 	arr[count] = 70; count++;
 
-	std::cout << "After adding 50, 60, 70:";
+	std::cout << "After adding 40, 50, 60, 70:";
 
 	printArray(arr, count, capacity);
 
