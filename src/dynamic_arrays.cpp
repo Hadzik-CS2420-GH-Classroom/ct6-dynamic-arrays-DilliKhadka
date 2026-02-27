@@ -75,6 +75,7 @@ void dynamicArrays() {
     printArray(arr, count, capacity);
 
     // TODO: Add 40 to fill the array to capacity
+	arr[count] = 40; count++;   
 
     std::cout << "After adding 40 (full!):";
     // TODO: Call printArray to display the state
@@ -165,17 +166,14 @@ void dynamicArrays() {
 	printArray(arr, count, capacity);
     // --- 4. Adding more elements after resize ---
     std::cout << "\n--- 4. Adding After Resize ---" << '\n';
-    arr[count] = 40; count++;
 	arr[count] = 50; count++;
 	arr[count] = 60; count++;   
 	arr[count] = 70; count++;
 
-	std::cout << "After adding 40, 50, 60, 70:";
+	std::cout << "After adding 50, 60, 70:";
 
 	printArray(arr, count, capacity);
 
-
-    std::cout << "After adding 50, 60, 70:";
     // TODO: Call printArray to display the state
     // Expected output: "After adding 50, 60, 70:  [10, 20, 30, 40, 50, 60, 70]  (count=7, capacity=8)"
 
@@ -191,9 +189,6 @@ void dynamicArrays() {
     
 	std::cout << "Dynamic array freed" << '\n';  
 
-    // TODO: delete[] arr and set to nullptr
-
-    std::cout << "Dynamic array freed" << '\n';
 
     // ! DISCUSSION: Putting it all together
     //   What we just built is the core algorithm behind std::vector:
